@@ -48,7 +48,7 @@ Returns a `ChildProcess` object. You can handle errors by listening to the `stde
 	var listener = unoconv.listen({ port: 2002 });
 	
 	listener.stderr.on('data', function (data) {
-		console.log('stderr: ' + data.toString('utf8));
+		console.log('stderr: ' + data.toString('utf8'));
 	});
 
 ### unoconv.detectSupportedFormats([options], callback)

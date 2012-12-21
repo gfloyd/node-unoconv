@@ -11,7 +11,7 @@ var unoconv = exports = module.exports = {};
 *
 * @param {String} file
 * @param {String} outputFormat
-* @param {Object|Function} port
+* @param {Object|Function} options
 * @param {Function} callback
 * @api public
 */

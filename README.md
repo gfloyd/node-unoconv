@@ -10,12 +10,12 @@ A node.js wrapper for converting documents with [unoconv](http://dag.wieers.com/
 
 Install with:
 
-    npm install node-unoconv
+    npm install unoconv
 
 ## Converting documents
 
 	var unoconv = require('unoconv');
-	
+
 	unoconv.convert('document.docx', 'pdf', function (err, result) {
 		// result is returned as a Buffer
 		fs.writeFile('converted.pdf', result);
@@ -25,7 +25,7 @@ Install with:
 
 You can also start a unoconv listener to avoid launching Libre/OpenOffice on every conversion:
 
-	unoconv.listen();	
+	unoconv.listen();
 
 ## API
 
@@ -46,7 +46,7 @@ Starts a new unoconv listener. `options` accepts the same parameters as `convert
 Returns a `ChildProcess` object. You can handle errors by listening to the `stderr` property:
 
 	var listener = unoconv.listen({ port: 2002 });
-	
+
 	listener.stderr.on('data', function (data) {
 		console.log('stderr: ' + data.toString('utf8'));
 	});
